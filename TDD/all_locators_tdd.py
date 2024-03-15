@@ -15,5 +15,12 @@ CLCK_ON_CART_ICN = (By.XPATH, "//p[@class='hidden items-center sm:flex']")
 SHPNG_CRT_TXT = (By.XPATH, "//h2[@class='mx-4 my-6 text-4xl']")
 CNTNUE_SHPNG_BTN = (By.XPATH, "//a[normalize-space()='Continue Shopping']")
 YR_CRT_IS_EMPTY = (By.XPATH, "//p[normalize-space()='Your cart is empty']")
+ADD_TRKSH_CFFE = (By.XPATH, "/html[1]/body[1]/main[1]/section[2]/div[1]/ul[1]/li[2]/div[1]/div[2]/div[1]/button[1]/img[1]")
+CRT_BTN_AFTR_ADDING = (By.XPATH, "//img[contains(@alt,'Cart')]")
+CNTR_1_HERE = (By.XPATH, "//span[normalize-space()='1']")
+TRKSH_CFF_IN_THE_CRT = (By.XPATH, "//p[normalize-space()='Turkish Coffee']")
+FIVE_HNDRD_GRMS_TXT = (By.XPATH, "//p[contains(@class,'font-medium text-placeholder')]")
+FOUR_HUNDRED_FORTY_NINE_DLRS = (By.XPATH, "//p[contains(@class,'right-0 top-0 text-lg font-semibold sm:absolute')]")
+GO_TO_CHCK_OUT_BTN = (By.XPATH, "//a[text() = 'Go to checkout']")
 
 
