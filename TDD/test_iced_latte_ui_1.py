@@ -53,4 +53,4 @@ def test_iced_latte_ui_1():
 
     sleep(8)
     driver.delete_all_cookies()
-    # driver.quit()
+    driver.quit()
