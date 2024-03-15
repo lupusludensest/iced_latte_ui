@@ -24,7 +24,7 @@ def test_iced_latte_ui_1():
     # Send first name to first name field
     first_name_field = driver.find_element(*FRST_NM_FLD)
     first_name_field.clear()
-    first_name_field.send_keys('Victor')
+    first_name_field.send_keys('Viacheslav')
     # sleep(2)
 
     # Send last name to last name field
@@ -39,18 +39,16 @@ def test_iced_latte_ui_1():
     first_name_field.send_keys('gurovvic@gmail.com')
     # sleep(2)
 
-    # Send password to passwrd field
+    # Send password to password field
     first_name_field = driver.find_element(*PSWRD_FLD)
     first_name_field.clear()
-    first_name_field.send_keys('qwertyuiop1@')
+    first_name_field.send_keys('qwertyuiop12!@')
     # sleep(2)
 
     # Click user register user button
     driver.find_element(*REGISTER_USER_BTN).click()
+    # sleep(2)
+
     sleep(2)
-
-
-
-    sleep(8)
     driver.delete_all_cookies()
     driver.quit()
