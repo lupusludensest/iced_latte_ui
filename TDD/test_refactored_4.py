@@ -58,7 +58,7 @@ def go_to_checkout(driver):
     actual_text = go_to_chck_out_btn.text
     assert expected_text == actual_text, f'Expected {expected_text}, but got {actual_text}'
 
-def test_iced_latte_ui_3():
+def test_iced_latte_ui_4():
     driver = webdriver.Chrome()
     driver.maximize_window()
     driver.implicitly_wait(5)

@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
-def test_iced_latte_ui_3():
+def test_iced_latte_ui_4():
     driver = webdriver.Chrome()
     driver.maximize_window()
     driver.implicitly_wait(5)
