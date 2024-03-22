@@ -1,4 +1,5 @@
 from all_locators_tdd import *
+from credentials import *
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,7 +10,7 @@ def test_iced_latte_ui_1():
     driver.maximize_window()
     driver.implicitly_wait(5)
 
-    driver.get("https://iced-latte.uk/")
+    driver.get(base_url)
     driver.delete_all_cookies()
     wait = WebDriverWait(driver, 15)
 
@@ -24,25 +25,25 @@ def test_iced_latte_ui_1():
     # 3 Send first name to first name field
     first_name_field = driver.find_element(*FRST_NM_FLD)
     first_name_field.clear()
-    first_name_field.send_keys('Viacheslav')
+    first_name_field.send_keys(first_name)
     # sleep(2)
 
     # 4 Send last name to last name field
     first_name_field = driver.find_element(*LST_NM_FLD)
     first_name_field.clear()
-    first_name_field.send_keys('Gurov')
+    first_name_field.send_keys(last_name)
     # sleep(2)
 
     # 5 Send email to email field
     first_name_field = driver.find_element(*EML_FLD)
     first_name_field.clear()
-    first_name_field.send_keys('gurovvic@gmail.com')
+    first_name_field.send_keys(email_valid)
     # sleep(2)
 
     # 6 Send password to password field
     first_name_field = driver.find_element(*PSWRD_FLD)
     first_name_field.clear()
-    first_name_field.send_keys('qwertyuiop12!@')
+    first_name_field.send_keys(password_valid)
     # sleep(2)
 
     # 7 Click user register user button

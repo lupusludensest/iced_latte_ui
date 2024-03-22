@@ -1,4 +1,5 @@
 from all_locators_tdd import *
+from credentials import *
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,43 +10,39 @@ def test_iced_latte_ui_4():
     driver.maximize_window()
     driver.implicitly_wait(5)
 
-    driver.get("https://iced-latte.uk/")
+    driver.get(base_url)
     driver.delete_all_cookies()
     wait = WebDriverWait(driver, 15)
 
-    # 1 Registered user is loggin with valid credentials
-    email_valid = 'gurovvic@gmail.com'
-    password_valid = 'qwertyuiop12!@'
-
-    # 2 Click user authorization icon
+    # 1 Click user authorization icon
     driver.find_element(*USER_AUTH_ICON).click()
     sleep(4)
 
-    # 3 Send registered email to email field
+    # 2 Send registered email to email field
     first_name_field = driver.find_element(*EML_FLD)
     first_name_field.clear()
     first_name_field.send_keys(email_valid)
     # sleep(2)
 
-    # 4 Send valid password to password field
+    # 3 Send valid password to password field
     first_name_field = driver.find_element(*PSWRD_FLD)
     first_name_field.clear()
     first_name_field.send_keys(password_valid)
     # sleep(2)
 
-    # 5 Click login button
+    # 4 Click login button
     driver.find_element(*LGN_BTN).click()
     # sleep(2)
 
-    # 6 Click on cart icon
+    # 5 Click on cart icon
     driver.find_element(*CLCK_ON_CART_ICN).click()
     # sleep(2)
 
-    # 7 Click on Continue Shopping button
+    # 6 Click on Continue Shopping button
     driver.find_element(*CNTNUE_SHPNG_BTN).click()
     # sleep(2)
 
-    # Click on "+" button, adding Turkish Coffee to the cart
+    # 7 Click on "+" button, adding Turkish Coffee to the cart
     driver.find_element(*ADD_TRKSH_CFFE).click()
     # sleep(2)
 

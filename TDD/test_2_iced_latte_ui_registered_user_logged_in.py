@@ -1,4 +1,5 @@
 from all_locators_tdd import *
+from credentials import *
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,41 +10,37 @@ def test_iced_latte_ui_2():
     driver.maximize_window()
     driver.implicitly_wait(5)
 
-    driver.get("https://iced-latte.uk/")
+    driver.get(base_url)
     driver.delete_all_cookies()
     wait = WebDriverWait(driver, 15)
 
-    # 1 Registered user is loggin with valid credentials
-    email_valid = 'gurovvic@gmail.com'
-    password_valid = 'qwertyuiop12!@'
-
-    # 2 Click user authorization icon
+    # 1 Click user authorization icon
     driver.find_element(*USER_AUTH_ICON).click()
     sleep(4)
 
-    # 3 Send registered email to email field
+    # 2 Send registered email to email field
     first_name_field = driver.find_element(*EML_FLD)
     first_name_field.clear()
     first_name_field.send_keys(email_valid)
     # sleep(2)
 
-    # 4 Send valid password to password field
+    # 3 Send valid password to password field
     first_name_field = driver.find_element(*PSWRD_FLD)
     first_name_field.clear()
     first_name_field.send_keys(password_valid)
     # sleep(2)
 
-    # 5 Click login button
+    # 4 Click login button
     driver.find_element(*LGN_BTN).click()
     # sleep(2)
 
-    # 6 Assert user is logged in
+    # 5 Assert user is logged in
     registered_user_logged_logo = driver.find_element(*REGISTERED_USR_LOGGED_LOGO)
     expected_text = 'Viachesla...'
     actual_text = registered_user_logged_logo.text
     assert expected_text == actual_text, f'Expected {expected_text}, but got {actual_text}'
 
-    # 7 Close the current instance
+    # 6 Close the current instance
     sleep(2)
     driver.delete_all_cookies()
     driver.quit()
