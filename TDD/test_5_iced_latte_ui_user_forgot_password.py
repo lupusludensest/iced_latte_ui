@@ -16,11 +16,11 @@ def test_iced_latte_ui_5():
 
     # 1 Click user authorization icon
     driver.find_element(*USER_AUTH_ICON).click()
-    sleep(4)
+    # sleep(2)
 
     # 2 Click on Forgot password button
     driver.find_element(*FRGT_PSSWD).click()
-    sleep(4)
+    # sleep(2)
 
     # 3 Send email to email field to reset password
     first_name_field = driver.find_element(*ENTR_YR_EML_ADDRSS_FLD_RST_PSWD)
@@ -30,11 +30,11 @@ def test_iced_latte_ui_5():
 
     # 4 Click on Send reset link button
     driver.find_element(*SND_RST_LNK).click()
-    sleep(4)
+    # sleep(2)
 
     # 5 Click on Continue to change your password button
     driver.find_element(*CNTNUE_TO_CNHG_YR_PSWRD).click()
-    sleep(4)
+    # sleep(2)
 
     # 6 Send code from email to the field
     code_from_email_field = driver.find_element(*CODE_FROM_EMAIL_FLD)
@@ -56,7 +56,7 @@ def test_iced_latte_ui_5():
 
     # 9 Click on Reset password button
     driver.find_element(*RESET_PSWRD_BTN).click()
-    sleep(4)
+    # sleep(2)
 
     # 10 Verify message "Server Error: Incorrect token" is here
     incorrect_token_text = driver.find_element(*INCORRECT_TOKEN_TEXT)

@@ -16,7 +16,7 @@ def test_iced_latte_ui_2():
 
     # 1 Click user authorization icon
     driver.find_element(*USER_AUTH_ICON).click()
-    sleep(4)
+    # sleep(2)
 
     # 2 Send registered email to email field
     first_name_field = driver.find_element(*EML_FLD)

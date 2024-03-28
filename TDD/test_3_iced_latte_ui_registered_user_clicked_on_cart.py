@@ -16,7 +16,7 @@ def test_iced_latte_ui_3():
 
     # 1 Click user authorization icon
     driver.find_element(*USER_AUTH_ICON).click()
-    sleep(4)
+    # sleep(2)
 
     # 2 Send registered email to email field
     first_name_field = driver.find_element(*EML_FLD)
@@ -66,6 +66,6 @@ def test_iced_latte_ui_3():
     assert expected_text == actual_text, f'Expected {expected_text}, but got {actual_text}'
 
     # 7 Close the current instance
-    sleep(4)
+    sleep(2)
     driver.delete_all_cookies()
     driver.quit()

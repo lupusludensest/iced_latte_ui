@@ -31,7 +31,12 @@ NEW_PASSWORD_FLD = (By.XPATH, "//input[@id='password']")
 CNFRM_YR_PSWRD_FLD = (By.XPATH, "//input[@id='confirmPassword']")
 RESET_PSWRD_BTN = (By.XPATH, "//button[@type='submit']")
 INCORRECT_TOKEN_TEXT = (By.XPATH, "//div[@class='mt-4 text-negative']")
-
+HEART_ICON_FAVORITIES = (By.XPATH, "//img[@alt='heart']")
+HEART_VANILLA_LATTE = (By.XPATH, "//body/main/section/div/ul/li[1]/div[1]/div[1]/button[1]/img[1]")
+HEART_TURKISH_COFFEE = (By.XPATH, "//body/main/section/div/ul/li[2]/div[1]/div[1]/button[1]/img[1]")
+FOUR_POINT_FOURTY_NINE_DOLLARS = (By.XPATH, "//p[normalize-space()='$4.49']")
+VANILLA_LATTE_TEXT = (By.XPATH, "//p[normalize-space()='Vanilla Latte']")
+FOUR_POINT_EIGTHY_FIVE_DOLLARS = (By.XPATH, "//p[normalize-space()='$4.85']")
 
 
 
