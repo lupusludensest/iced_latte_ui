@@ -19,15 +19,15 @@ def test_iced_latte_ui_2():
     # sleep(2)
 
     # 2 Send registered email to email field
-    first_name_field = driver.find_element(*EML_FLD)
-    first_name_field.clear()
-    first_name_field.send_keys(email_valid)
+    email_field = driver.find_element(*EML_FLD)
+    email_field.clear()
+    email_field.send_keys(email_valid)
     # sleep(2)
 
     # 3 Send valid password to password field
-    first_name_field = driver.find_element(*PSWRD_FLD)
-    first_name_field.clear()
-    first_name_field.send_keys(password_valid)
+    passwrd_field = driver.find_element(*PSWRD_FLD)
+    passwrd_field.clear()
+    passwrd_field.send_keys(password_valid)
     # sleep(2)
 
     # 4 Click login button
