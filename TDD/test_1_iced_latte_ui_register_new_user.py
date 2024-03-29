@@ -29,21 +29,21 @@ def test_iced_latte_ui_1():
     # sleep(2)
 
     # 4 Send last name to last name field
-    first_name_field = driver.find_element(*LST_NM_FLD)
-    first_name_field.clear()
-    first_name_field.send_keys(last_name)
+    last_name_field = driver.find_element(*LST_NM_FLD)
+    last_name_field.clear()
+    last_name_field.send_keys(last_name)
     # sleep(2)
 
     # 5 Send email to email field
-    first_name_field = driver.find_element(*EML_FLD)
-    first_name_field.clear()
-    first_name_field.send_keys(email_valid)
+    email_field = driver.find_element(*EML_FLD)
+    email_field.clear()
+    email_field.send_keys(email_valid)
     # sleep(2)
 
     # 6 Send password to password field
-    first_name_field = driver.find_element(*PSWRD_FLD)
-    first_name_field.clear()
-    first_name_field.send_keys(password_valid)
+    password_field = driver.find_element(*PSWRD_FLD)
+    password_field.clear()
+    password_field.send_keys(password_valid)
     # sleep(2)
 
     # 7 Click user register user button
